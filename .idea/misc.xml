@@ -3,7 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/buttonshape.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/coustem_email_icon.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/coustem_lock_icon.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/coustem_textfeld.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/eingabefeld_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/ic_email.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/ic_email_focused.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/ic_lock.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/ic_lock_focused.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/icon_email.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/icon_lock.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/inputstyle.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/kopf_design.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/login_design.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/content_login.xml" value="0.1953125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/login.xml" value="0.1953125" />
       </map>
     </option>
   </component>
@@ -12,5 +34,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.152" />
+      </ProjectState>
+    </option>
   </component>
 </project>

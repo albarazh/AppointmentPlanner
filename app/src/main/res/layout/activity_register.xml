@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="#4556B6">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="67dp"
+        android:layout_height="50dp"
+        android:background="#003700B3"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="392dp"
+        android:layout_height="658dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginBottom="316dp"
+            android:background="@drawable/eingabefeld_background"
+            android:text="@string/Register"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            app:iconTint="#8BC34A" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginBottom="316dp"
+            android:background="@drawable/eingabefeld_background"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/kopf_design"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/Register"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="65sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/usernameinput"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="130dp"
+            android:hint="@string/username"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/icon_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/emailinput"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            android:hint="@string/email_adress"
+            app:counterMaxLength="30"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/icon_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/passwordinput"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="270dp"
+            android:hint="@string/password"
+            app:counterMaxLength="30"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/icon_lock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:id="@+id/repeatpasswordinput"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="340dp"
+            android:hint="@string/repeatpassword"
+            app:counterMaxLength="30"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@drawable/icon_repeat">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="363dp"
+        android:layout_height="233dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logot"
+        tools:layout_editor_absoluteY="-16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

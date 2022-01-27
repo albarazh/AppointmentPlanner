@@ -3,10 +3,54 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Appointment_planner/app/src/main/res/layout/activity_login.xml" value="0.21" />
-        <entry key="..\:/Appointment_planner/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/add_background.xml" value="0.176" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/add_note_background.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/applogo_background.xml" value="0.23378378378378378" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_delete.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_dialog.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_done_butoon.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_miscellaneous.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note.xml" value="0.17533783783783785" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_1.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_2.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_3.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_4.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_5.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_6.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_color_7.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_note_item.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/background_search.xml" value="0.23378378378378378" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/buttonshapedesign.xml" value="0.23378378378378378" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/cardview_background.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/eingabefeld_background.xml" value="0.23378378378378378" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/ic_check.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/icon_design.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/kopf_design.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/layout_theme.xml" value="0.23378378378378378" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/recyclerview_background.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/round_border.xml" value="0.17533783783783785" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout-v31/activity_note_add.xml" value="0.25416666666666665" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_appointment.xml" value="0.21981981981981982" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_homepage.xml" value="0.2" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_login.xml" value="0.21981981981981982" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_main.xml" value="0.21981981981981982" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_note_add.xml" value="0.1" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_note_overview.xml" value="0.152" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_notes.xml" value="0.21981981981981982" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_register.xml" value="0.176" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/add_notes.xml" value="0.21981981981981982" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/colorsheet.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/item_contener_note.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/layout.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/layout_add_url.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/layout_miscellaneous.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/loading.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/applogo_background.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/background_search.xml" value="0.23378378378378378" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/buttonshape.xml" value="0.2703125" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/buttonshapedesign.xml" value="0.23378378378378378" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/coustem_email_icon.xml" value="0.2703125" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/coustem_lock_icon.xml" value="0.2703125" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/coustem_textfeld.xml" value="0.2703125" />
@@ -21,12 +65,20 @@
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/inputstyle.xml" value="0.2703125" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/kopf_design.xml" value="0.2703125" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/drawable/login_design.xml" value="0.2703125" />
-        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_appointment.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_homepage.xml" value="0.2" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_login.xml" value="0.152" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_notes.xml" value="0.176" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_register.xml" value="0.176" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_setting.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_to_do.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/activity_todo.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/add_notes.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/content_login.xml" value="0.1953125" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/loading.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/hamza/AndroidStudioProjects/Appointmentplanner/app/src/main/res/layout/login.xml" value="0.1953125" />
       </map>
     </option>
@@ -40,7 +92,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.152" />
+        <option name="scale" value="0.1" />
       </ProjectState>
     </option>
   </component>

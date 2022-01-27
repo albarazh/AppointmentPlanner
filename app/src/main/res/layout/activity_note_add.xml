@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3F51B5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:paddingBottom="@dimen/_140sdp"
+        >
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            app:layout_constraintCircleRadius="@dimen/_100sdp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/add_note_background"
+            android:layout_marginBottom="100dp"
+            android:scrollbars="vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#222F7A"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/ic_back"
+                    app:layout_constraintTop_toTopOf="@id/addNoteText"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/addNoteText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_note"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/kopf_design"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/_40sdp"
+                    />
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:visibility="visible"
+                    android:background="@drawable/ic_ok"
+                    app:layout_constraintTop_toTopOf="@id/addNoteText"
+                    />
+                <Button
+                    android:id="@+id/update"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:visibility="gone"
+                    android:background="@drawable/ic_check"
+                    app:layout_constraintTop_toTopOf="@id/addNoteText"
+                    />
+            </LinearLayout>
+
+
+
+            <View
+                android:id="@+id/colorview"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@drawable/background_note_item"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/addNoteText"
+                />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/noteTitleLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/title"
+                app:startIconDrawable="@drawable/ic_title"
+                app:layout_constraintTop_toBottomOf="@id/addNoteText"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/date"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/noteTitleInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@id/noteTitleLayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+            <LinearLayout
+                android:id="@+id/layoutWebUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/date"
+                app:layout_constraintTop_toBottomOf="@id/imageNote">
+
+                <TextView
+                    android:id="@+id/textWebURL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+
+                    />
+                <ImageView
+                    android:id="@+id/imageRemoveWebUrl"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_delete"
+                    app:tint="#9F2222" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageRemoveImage"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/background_delete"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4sdp"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/imageNote"
+                app:tint="@color/white" />
+            <ImageView
+                android:id="@+id/imageNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/noteTextLayout"
+                app:layout_constraintTop_toBottomOf="@id/date"
+                />
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/noteTextLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="390dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/noteTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="start"
+                    android:gravity="top"
+                    android:minHeight="@dimen/_250sdp"
+                    android:hint="@string/type_note_here"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textMultiLine"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="45dp"
+        >
+        <include layout="@layout/layout_miscellaneous" />
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

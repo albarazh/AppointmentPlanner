@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMiscellaneous"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:background="@drawable/background_miscellaneous"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/textMiscellaneous"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/note_option"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:background="@drawable/round_border"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_5sdp">
+            <View
+                android:id="@+id/viewColor1"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_1"/>
+
+            <ImageView
+                android:id="@+id/imageColor1"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_check"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor2"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_2"/>
+
+            <ImageView
+                android:id="@+id/imageColor2"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor3"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_3"/>
+
+            <ImageView
+                android:id="@+id/imageColor3"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor4"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_4"/>
+
+            <ImageView
+                android:id="@+id/imageColor4"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor5"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_5"/>
+
+            <ImageView
+                android:id="@+id/imageColor5"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <View
+                android:id="@+id/viewColor6"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_6"/>
+
+            <ImageView
+                android:id="@+id/imageColor6"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_5sdp">
+            <View
+                android:id="@+id/viewColor7"
+                android:layout_width="@dimen/_35ssp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_note_color_7"/>
+
+            <ImageView
+                android:id="@+id/imageColor7"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAddImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/round_border"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:src="@drawable/ic_insert_photo"
+            app:tint="@color/black" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="@string/add_image"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutAddUrl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/round_border"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:src="@drawable/ic_web"
+            app:tint="@color/black" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="@string/add_Url"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutDeleteNote"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/round_border"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:src="@drawable/ic_delete"
+            app:tint="#BA0B0B" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            android:text="@string/delete_note"
+            android:textColor="#FFBA0B0B"
+            android:textSize="@dimen/_12ssp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

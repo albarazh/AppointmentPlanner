@@ -4,6 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage">
+    android:background="#4556B6"
+    tools:context=".Homepage">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="398dp"
+        android:layout_height="800dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/kopf_design"
+            android:text="Appointment"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30sdp"
+
+            app:layout_constraintBottom_toTopOf="@+id/animationeffect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animationeffect2"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationeffect2"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:layout_marginTop="75dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.178"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/logo" />
+
+        <AbsoluteLayout
+            android:layout_width="334dp"
+            android:layout_height="135dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="620dp"
+
+            tools:ignore="Deprecated">
+
+
+            <ImageButton
+                android:id="@+id/todoButton"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_x="129dp"
+                android:layout_y="5dp"
+                android:background="@color/design_default_color_on_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/todo" />
+
+            <ImageButton
+                android:id="@+id/noteButton"
+                android:layout_width="108dp"
+                android:layout_height="100dp"
+                android:layout_x="16dp"
+                android:layout_y="20dp"
+                android:background="@color/design_default_color_on_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/note" />
+
+        </AbsoluteLayout>
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="770dp"
+            android:background="@drawable/kopf_design"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintBottom_toTopOf="@+id/animationeffect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animationeffect2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"/>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

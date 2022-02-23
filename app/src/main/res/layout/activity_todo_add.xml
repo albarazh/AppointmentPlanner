@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#3F51B5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+
+            >
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:layout_marginTop="150dp"
+                    app:layout_constraintCircleRadius="@dimen/_100sdp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/add_note_background"
+                    android:layout_marginBottom="100dp"
+                    android:scrollbars="vertical"
+                    android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="@drawable/todo_head_background"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+                                <Button
+                                    android:id="@+id/todoBack"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginStart="5dp"
+                                    android:background="@drawable/ic_back"
+                                    app:layout_constraintTop_toTopOf="@id/addNoteText"
+                                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                                <TextView
+                                    android:id="@+id/addTodoText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_todo"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/kopf_design"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/_40sdp"
+                                    />
+
+                                <Button
+                                    android:id="@+id/todoSave"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:visibility="visible"
+                                    android:background="@drawable/ic_ok"
+                                    app:layout_constraintTop_toTopOf="@id/addNoteText"
+                                    />
+                                <Button
+                                    android:id="@+id/todoUpdate"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="15dp"
+                                    android:visibility="gone"
+                                    android:background="@drawable/ic_check"
+                                    app:layout_constraintTop_toTopOf="@id/addNoteText"
+                                    />
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:id="@+id/todoColorView"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@drawable/background_note_item"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/addNoteText"
+                            />
+
+                        <TextView
+                            android:id="@+id/todoDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintTop_toBottomOf="@id/noteTitleLayout"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/todoTextLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="390dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:hintAnimationEnabled="true"
+                            app:layout_constraintTop_toBottomOf="@id/date"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            >
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/todoTextInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:ellipsize="start"
+                                    android:gravity="top"
+                                    android:minHeight="@dimen/_250sdp"
+                                    android:hint="@string/type_note_here"
+                                    android:importantForAutofill="no"
+                                    android:includeFontPadding="false"
+                                    android:inputType="textMultiLine"
+                                    />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <LinearLayout
+                            android:id="@+id/layoutTaskdone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_gravity="center_vertical"
+                            android:visibility="gone"
+                            android:background="@drawable/round_border"
+                            android:orientation="horizontal"
+                            >
+                                <ImageView
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:contentDescription="@string/app_name"
+                                    android:layout_marginStart="@dimen/_100sdp"
+                                    android:src="@drawable/ic_check"
+                                    app:tint="@color/black" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/task_done"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:background="@drawable/todo_colorpanel_backgrounf"
+                           >
+
+                                <FrameLayout
+                                    android:id="@+id/Color1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginStart="@dimen/_5sdp">
+                                        <View
+                                            android:id="@+id/viewColor1"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_1"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor1"
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            android:src="@drawable/ic_check"
+                                            app:tint="@color/white"/>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:id="@+id/Color2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                        <View
+                                            android:id="@+id/viewColor2"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_2"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor2"
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            app:tint="@color/white"/>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:id="@+id/Color3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                        <View
+                                            android:id="@+id/viewColor3"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_3"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor3"
+                                            android:layout_width="48dp"
+                                            android:layout_height="match_parent"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            app:tint="@color/white" />
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:id="@+id/Color4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                        <View
+                                            android:id="@+id/viewColor4"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_4"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor4"
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            app:tint="@color/white"/>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:id="@+id/Color5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                        <View
+                                            android:id="@+id/viewColor5"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_5"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor5"
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            app:tint="@color/white"/>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:id="@+id/Color6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+                                        <View
+                                            android:id="@+id/viewColor6"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_6"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor6"
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            app:tint="@color/white"/>
+
+                                </FrameLayout>
+                                <FrameLayout
+                                    android:id="@+id/Color7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="@dimen/_5sdp">
+                                        <View
+                                            android:id="@+id/viewColor7"
+                                            android:layout_width="@dimen/_35ssp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:background="@drawable/background_note_color_7"/>
+
+                                        <ImageView
+                                            android:id="@+id/imageColor7"
+                                            android:layout_width="@dimen/_35sdp"
+                                            android:layout_height="@dimen/_35sdp"
+                                            android:contentDescription="@string/app_name"
+                                            android:padding="@dimen/_10sdp"
+                                            app:tint="@color/white"/>
+                                </FrameLayout>
+
+                        </LinearLayout>
+                </LinearLayout>
+
+
+
+
+        </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -44,7 +44,7 @@ import java.util.Objects;
 
 public class NoteAdd extends AppCompatActivity {
     Statusbar statusbar;
-    LinearLayout layoutMiscellaneous,layoutWebUrl,layouttextWebUrl,layoutimageNote;
+    LinearLayout layoutMiscellaneous,layoutWebUrl,layouttextWebUrl;
     TextView date, textWebUrl;
     Button back,save,update;
     String currentDate;
@@ -373,7 +373,7 @@ public class NoteAdd extends AppCompatActivity {
             }
             if(database.insert_note(note.getTitle(),note.getNoteText(),selectNoteColor,note.getImagePath(),note.getLink()))
             {
-                loadingDialog.startLoadingDialog();
+                //loadingDialog.startLoadingDialog();
                 Toast.makeText(getApplicationContext(), "Successful added", Toast.LENGTH_LONG).show();
                 Log.d("AddNote","Successful");
                 openPage(NoteOverview.class);

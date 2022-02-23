@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appointmentplanner"
-    android:windowSoftInputMode="adjustResize">
+    android:windowSoftInputMode="adjustResize" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
 
     <application
         android:allowBackup="true"
@@ -13,12 +12,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/applogo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppointmentPlanner">
+        android:theme="@style/Theme.AppointmentPlanner" >
+        <activity
+            android:name=".TodoAdd"
+            android:exported="false" />
         <activity
             android:name=".NoteAdd"
             android:exported="false" />
         <activity
-            android:name=".To_Do"
+            android:name=".TodoOverview"
             android:exported="false" />
         <activity
             android:name=".Setting"
@@ -40,7 +42,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

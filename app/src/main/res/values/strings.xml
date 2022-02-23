@@ -19,4 +19,10 @@
     <string name="add_note">Add Note</string>
     <string name="delete_note">Delete Note</string>
     <string name="delete_note_text">do you want to delete this Note ? </string>
+    <string name="my_todos">My Todos</string>
+    <string name="type_your_todo_here">type your todo here ..</string>
+    <string name="done">Done</string>
+    <string name="search_in_todos">search in todos</string>
+    <string name="add_todo">add Todo</string>
+    <string name="task_done">Task Done</string>
 </resources>

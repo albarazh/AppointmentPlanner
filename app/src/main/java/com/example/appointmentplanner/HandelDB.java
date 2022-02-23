@@ -12,6 +12,7 @@ public class HandelDB {
     private static final String LOG = "DEBUGHandel";
     private static final String users_table= "users_table";
     private static final String note_table="note_table";
+    private static final String todo_table="todo_table";
     private static int  user_id ;
     private static String  username ;
 
@@ -171,6 +172,77 @@ public class HandelDB {
             return false;
         }
     }
+    protected Boolean insert_todo(String text,String status,String color)
+    {
+        try {
+            Connection connection = datenBank.connection();
+            String queryStmt = "INSERT INTO "+todo_table+
+                    " (user_id, todoText, todoStatus, todoColor, todoDate) values "
+                    + "("+getUser_id()+",'"+text+"', '"+status+"', '"+color+"', getutcdate())";
+            PreparedStatement preparedStatement = connection.prepareStatement(queryStmt);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            Log.d(LOG, "Added successfully");
+            connection.close();
+            return true;
+        }
+        catch (SQLException e)
+        {
+            Log.d(LOG, "SQLException "+e.getMessage());
+            return false;
+        }
+        catch (Exception e)
+        {
+            Log.d(LOG, "Exception. Please check your code and database.");
+            return false;
+        }
+    }
+    protected Boolean update_todo(String text,String status,int todo_id)
+    {
+        try {
+            Connection connection = datenBank.connection();
+            String queryStmt = "UPDATE "+todo_table+" SET todoText = '"+text+"', todoStatus = '"+status+"' WHERE todo_id ="+todo_id+";";
+            PreparedStatement preparedStatement = connection.prepareStatement(queryStmt);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            Log.d(LOG, "Updated successfully");
+            connection.close();
+            return true;
+        }
+        catch (SQLException e)
+        {
+            Log.d(LOG, "SQLException: "+e.getMessage());
+            return false;
+        }
+        catch (Exception e)
+        {
+            Log.d(LOG, "Exception: "+e.getMessage());
+            return false;
+        }
+    }
+    protected Boolean delete_todo(int todo_id)
+    {
+        try {
+            Connection connection = datenBank.connection();
+            String queryStmt = "DELETE FROM "+todo_table+" WHERE todo_id ="+todo_id+";";
+            PreparedStatement preparedStatement = connection.prepareStatement(queryStmt);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            Log.d(LOG, "Updated successfully");
+            connection.close();
+            return true;
+        }
+        catch (SQLException e)
+        {
+            Log.d(LOG, "SQLException: "+e.getMessage());
+            return false;
+        }
+        catch (Exception e)
+        {
+            Log.d(LOG, "Exception: "+e.getMessage());
+            return false;
+        }
+    }
     protected int check_username (String username)
     {
         try {
@@ -299,6 +371,35 @@ public class HandelDB {
             Log.d("NOTE_HandelDB", e.getMessage());
         }
         return noteList;
+    }
+    protected ArrayList<Todo> getAllTodos()
+    {
+        ArrayList<Todo> todoList = new ArrayList<>();
+        try {
+            Connection connection = datenBank.connection();
+            String getAllNotes ="Select * from "+todo_table;
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(getAllNotes);
+            while(rs.next())
+            {
+                Todo todo = new Todo();
+                todo.setTodo_id(rs.getInt("todo_id"));
+                todo.setTodoText(rs.getString("todoText"));
+                todo.setTodoStatus(rs.getString("todoStatus"));
+                todo.setTodoDate(rs.getString("todoDate"));
+                todoList.add(todo);
+            }
+            connection.close();
+        }
+        catch (SQLException e)
+        {
+            Log.d("TODO_HandelDB", e.getMessage());
+        }
+        catch (Exception e)
+        {
+            Log.d("TODO_HandelDB", e.getMessage());
+        }
+        return todoList;
     }
     protected int getUser_id() {
         return user_id;

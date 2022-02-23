@@ -30,6 +30,8 @@
         <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/layout_theme.xml" value="0.23378378378378378" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/recyclerview_background.xml" value="0.17357859531772576" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/round_border.xml" value="0.17533783783783785" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/todo_colorpanel_backgrounf.xml" value="0.17357859531772576" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/drawable/todo_head_background.xml" value="0.17357859531772576" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout-v31/activity_note_add.xml" value="0.25416666666666665" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_appointment.xml" value="0.21981981981981982" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_homepage.xml" value="0.2" />
@@ -39,9 +41,12 @@
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_note_overview.xml" value="0.152" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_notes.xml" value="0.21981981981981982" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_register.xml" value="0.176" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_to_do.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/activity_todo_add.xml" value="0.176" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/add_notes.xml" value="0.21981981981981982" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/colorsheet.xml" value="0.16486486486486487" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/item_contener_note.xml" value="0.16486486486486487" />
+        <entry key="..\:/Appointmentplanner/app/src/main/res/layout/item_contener_todo.xml" value="0.16486486486486487" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/layout.xml" value="0.16486486486486487" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/layout_add_url.xml" value="0.16486486486486487" />
         <entry key="..\:/Appointmentplanner/app/src/main/res/layout/layout_miscellaneous.xml" value="0.16486486486486487" />

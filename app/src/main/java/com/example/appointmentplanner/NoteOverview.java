@@ -25,7 +25,7 @@ public class NoteOverview extends AppCompatActivity  implements NotesListener{
     public static final int REQUEST_CODE_ADD_NOTE= 1;
     public static final int REQUEST_CODE_UPDATE_NOTE= 2;
     public static final int REQUEST_CODE_SHOW_NOTES= 3;
-    private static final HandelDB datenBank = new HandelDB();
+    private HandelDB datenBank;
     ArrayList<Note> noteList;
     NotesAdapter notesAdapter;
     RecyclerView notesRecyclerView;
@@ -39,16 +39,12 @@ public class NoteOverview extends AppCompatActivity  implements NotesListener{
         statusbar = new Statusbar();
         statusbar.check_sdk(NoteOverview.this, Build.VERSION.SDK_INT);
         setContentView(R.layout.activity_note_overview);
-
+        datenBank = new HandelDB();
         TextView item = findViewById(R.id.item);
         item.setText(datenBank.getTableRows("note_table") +" /Notes");
 
         addNote = findViewById(R.id.addNote);
-        addNote.setOnClickListener(v ->
-                startActivityForResult
-                        (new Intent(getApplicationContext(),NoteAdd.class),
-                        REQUEST_CODE_ADD_NOTE)
-        );
+        addNote.setOnClickListener(v -> startActivityForResult(new Intent(getApplicationContext(),NoteAdd.class),REQUEST_CODE_ADD_NOTE));
         search_bar_input =findViewById(R.id.search_bar_input);
         search_bar_input.addTextChangedListener(new TextWatcher() {
             @Override

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutTodo"
+    android:orientation="vertical"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:background="@drawable/background_note">
+     <LinearLayout
+         android:id="@+id/itemTodo"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         >
+         <TextView
+             android:id="@+id/todoTitle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/_8sdp"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_gravity="center"
+             android:layout_marginEnd="@dimen/_5sdp"
+             android:includeFontPadding="false"
+             android:textColor="@color/white"
+             android:textSize="@dimen/_14ssp" />
+         <TextView
+             android:id="@+id/todoDateContiner"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/_8sdp"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_marginEnd="@dimen/_8sdp"
+             android:layout_marginBottom="@dimen/_4sdp"
+             android:includeFontPadding="false"
+             android:textSize="@dimen/_6ssp"
+             android:textColor="@color/white"/>
+
+         <Switch
+             android:id="@+id/doneSwitch"
+             android:layout_width="60dp"
+             android:layout_height="40dp"
+             android:layout_gravity="center"
+             android:gravity="center"
+             tools:ignore="UseSwitchCompatOrMaterialXml" />
+     </LinearLayout>
+
+
+
+</LinearLayout>

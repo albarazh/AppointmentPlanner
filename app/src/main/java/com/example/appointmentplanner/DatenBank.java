@@ -10,7 +10,7 @@ public class DatenBank {
     private static String classs = "net.sourceforge.jtds.jdbc.Driver";
     private static String database = "appointment_planner";
     private static String username = "user@bala.de";
-    private static String password = "0955698392Zoro";
+    private static String password = "0955698392Hamza";
     private static final String LOG = "DEBUG1";
 
     protected Connection connection()

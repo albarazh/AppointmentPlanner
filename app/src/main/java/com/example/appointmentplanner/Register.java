@@ -2,13 +2,15 @@ package com.example.appointmentplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -17,36 +19,35 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
 
 
 public class Register extends AppCompatActivity {
 
     private boolean username_true=false, email_ture=false, password_true=false,
-                    repeat_password_true=false, passwords_identical=false,
+                    passwords_identical=false,
                     number= false, capital_letters = false, special_characters= false,
                     passwordLength= false;
     //TextInputLayout declaration
-    private static TextInputLayout username_layout, email_layout, password_layout, repeat_password_layout;
+    private TextInputLayout username_layout, email_layout, password_layout, repeat_password_layout;
     //EditText declaration
-    private static EditText username_input,email_input,password_input,repeat_password_input;
+    private EditText username_input,email_input,password_input, repeat_password_input;
     //Button declaration
     private Button back,register;
     //Textview
     private TextView login,numberTextview,specialCharactersTextview,capitalLetterTextview;
-    UserData user;
     Context context = Register.this;
     Statusbar statusbar;
     HandelDB Db = new HandelDB();
-
+    boolean connected = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         //Hide Actionbar
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         statusbar = new Statusbar();
         statusbar.check_sdk(Register.this, Build.VERSION.SDK_INT);
         setContentView(R.layout.activity_register);
@@ -72,6 +73,13 @@ public class Register extends AppCompatActivity {
         specialCharactersTextview= findViewById(R.id.specialCharactersTextview);
         capitalLetterTextview = findViewById(R.id.capitalLetterTextview);
 
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState()
+                == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            //we are connected to a network
+            connected = true;
+        }
         username_input.addTextChangedListener(new TextWatcher()  {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -178,6 +186,7 @@ public class Register extends AppCompatActivity {
 
             }
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void afterTextChanged(Editable s) {
                 if(number)
@@ -260,40 +269,45 @@ public class Register extends AppCompatActivity {
             }
         });
         //Buttons on click
-        register.setOnClickListener(new View.OnClickListener()  {
-            public void onClick(View v) {
-                if(!username_true)
-                {
-                    username_layout.setError("username is required");
-                }
-                else if(Db.check_username(username_input.getText().toString().trim()) == 1)
-                {
-                    username_true=false;
-                    username_layout.setError("Username already exist");
-                }
-                if(!email_ture)
-                {
-                    email_layout.setError( "Please press a valid E-Mail");
-                }
-                if(Db.check_email(email_input.getText().toString().trim()) == 1)
-                {
-                    email_ture=false;
-                    email_layout.setError("Email already exist");
-                }
-                if(!password_true)
-                {
-                    password_layout.setError("password is required");
-                }
-                if(!passwords_identical)
-                {
-                    repeat_password_layout.setError("password is required");
-                }
+        register.setOnClickListener(v -> {
+            if(!username_true)
+            {
+                username_layout.setError("username is required");
+            }
+            else if(Db.check_username(username_input.getText().toString().trim()) == 1)
+            {
+                username_true=false;
+                username_layout.setError("Username already exist");
+            }
+            if(!email_ture)
+            {
+                email_layout.setError( "Please press a valid E-Mail");
+            }
+            if(Db.check_email(email_input.getText().toString().trim()) == 1)
+            {
+                email_ture=false;
+                email_layout.setError("Email already exist");
+            }
+            if(!password_true)
+            {
+                password_layout.setError("password is required");
+            }
+            if(!passwords_identical)
+            {
+                repeat_password_layout.setError("password is required");
+            }
+            if(!checkInternetConnection())
+            {
+                Toast.makeText(getApplicationContext(), "please Check your Internet\nConnection", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
                 if(username_true && email_ture && password_true && passwords_identical)
                 {
 
                     if(Db.insert_user_data(username_input.getText().toString().trim()
-                                         , email_input.getText().toString().trim()
-                                         , password_input.getText().toString().trim()))
+                            , email_input.getText().toString().trim()
+                            , password_input.getText().toString().trim()))
                     {
                         Message.message(context,"Successful registration");
                         openMain(Homepage.class);
@@ -303,20 +317,10 @@ public class Register extends AppCompatActivity {
                         Message.message(context, "Registration failed!");
                     }
                 }
-
-
-
             }
         });
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMain(Login.class);
-            }
-        });
-        back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) { openMain(MainActivity.class); }
-        });
+        login.setOnClickListener(v -> openMain(Login.class));
+        back.setOnClickListener(v -> openMain(MainActivity.class));
     }
     public void openMain(Class classname){
         Intent intent = new Intent(this, classname);
@@ -333,9 +337,6 @@ public class Register extends AppCompatActivity {
                 if(string.charAt(i) == numbers.charAt(j))
                 {
                     counter++;
-                }
-                else
-                {
                 }
             }
         }
@@ -358,9 +359,6 @@ public class Register extends AppCompatActivity {
                 if(string.charAt(i) == special_characters.charAt(j))
                 {
                     counter++;
-                }
-                else
-                    {
                 }
             }
         }
@@ -401,5 +399,19 @@ public class Register extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         finish();
         return false;
+    }
+    public Boolean checkInternetConnection()
+    {
+        ConnectivityManager connectivityManager =
+                (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+            //we are connected to a network
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

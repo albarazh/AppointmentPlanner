@@ -5,6 +5,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4556B6"
-    tools:context=".To_Do">
+    tools:context=".NoteOverview">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/recyclerview_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.02">
+
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="34dp"
+            android:layout_height="55dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_search"
+            app:tint="@color/black" />
+
+        <EditText
+            android:id="@+id/search_bar_input_todo"
+            android:layout_width="321dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:background="@null"
+            android:hint="@string/search_in_todos"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="#050505"
+            android:textColorHint="#28000000" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="15dp"
+        android:background="#4556B6"
+        android:text="@string/my_todos"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationEffectTodo"
+        android:layout_width="105dp"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/todo2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todo_list"
+        android:layout_width="400dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_height="635dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/recyclerview_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="603dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/todo_list"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/itemCountTodo"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="150dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/addTodoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="552dp"
+        android:background="@drawable/add_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/todo_list"
+        app:layout_constraintVertical_bias="0.709"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        app:tint="@color/black" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

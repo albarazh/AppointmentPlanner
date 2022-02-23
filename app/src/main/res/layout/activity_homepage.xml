@@ -55,40 +55,6 @@
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/logo" />
 
-        <AbsoluteLayout
-            android:layout_width="334dp"
-            android:layout_height="135dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="620dp"
-
-            tools:ignore="Deprecated">
-
-
-            <ImageButton
-                android:id="@+id/todoButton"
-                android:layout_width="92dp"
-                android:layout_height="wrap_content"
-                android:layout_x="129dp"
-                android:layout_y="5dp"
-                android:background="@color/design_default_color_on_primary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/todo" />
-
-            <ImageButton
-                android:id="@+id/noteButton"
-                android:layout_width="108dp"
-                android:layout_height="100dp"
-                android:layout_x="16dp"
-                android:layout_y="20dp"
-                android:background="@color/design_default_color_on_primary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/note" />
-
-        </AbsoluteLayout>
-
         <TextView
             android:id="@+id/welcomeText"
             android:layout_width="match_parent"
@@ -111,6 +77,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="280dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/homePageAddNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="630dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#FF9800"
+            android:clickable="true"
+            android:visibility="gone"
+            android:focusable="true"
+            android:src="@drawable/ic_note_add"
+            android:tint="#000000"
+            app:backgroundTint="#FF9800" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="700dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_background"
+            android:backgroundTint="#FF9800"
+            android:clickable="true"
+            android:visibility="gone"
+            android:focusable="true"
+            android:src="@drawable/ic_todolist"
+
+            app:backgroundTint="#FF9800" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="700dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/add_background"
+            android:backgroundTint="#FF9800"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_add_24"
+            app:backgroundTint="#FF9800" />
     </androidx.cardview.widget.CardView>
 
 
